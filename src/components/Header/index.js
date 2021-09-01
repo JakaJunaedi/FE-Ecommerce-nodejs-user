@@ -77,15 +77,21 @@ const Header = (props) => {
       <DropdownMenu
         menu={<a className="fullName">{auth.user.fullName}</a>}
         menus={[
-          { label: "My Profile", 
+          { 
+            label: "My Profile", 
             href: `/account/profile`, 
-            icon: null },
+            icon: null 
+          },
           {
             label: "Orders",
             href: `/account/orders`,
             icon: null,
           },
-          { label: "Wishlist", href: "", icon: null },
+          { 
+            label: "Wishlist", 
+            href: `/account/wishlist`, 
+            icon: null 
+          },
           { label: "My Chats", href: "", icon: null },
           { label: "Coupons", href: "", icon: null },
           { label: "Rewards", href: "", icon: null },
@@ -112,9 +118,14 @@ const Header = (props) => {
           </a>
         }
         menus={[
-          { label: "My Profile", href: "", icon: null, onClick: () => {
-            !auth.authenticate && setLoginModal(true);
-          }, },
+          {
+            label: "My Profile",
+            href: "",
+            icon: null,
+            onClick: () => {
+              !auth.authenticate && setLoginModal(true);
+            },
+          },
           {
             label: "Orders",
             href: `/account/orders`,
@@ -123,18 +134,23 @@ const Header = (props) => {
               !auth.authenticate && setLoginModal(true);
             },
           },
-          { label: "Wishlist", href: "", icon: null },
+          { 
+            label: "Wishlist", 
+            href: `/account/wishlist`, 
+            icon: null,
+            onClick: () => {
+              !auth.authenticate && setLoginModal(true);
+            },
+          },
           { label: "Rewards", href: "", icon: null },
           { label: "Gift Cards", href: "", icon: null },
-          { label: "reset Password", 
-            href:`/reset_password`, 
-            icon: null
-          }
+          { label: "reset Password", href: `/reset_password`, icon: null },
         ]}
         firstMenu={
           <div className="firstmenu">
             <span>Buat Akun?</span>
-            <a className="link-daftar"
+            <a
+              className="link-daftar"
               onClick={() => {
                 setLoginModal(true);
                 setSignup(true);
@@ -156,7 +172,10 @@ const Header = (props) => {
           <div className="row">
             <div className="leftspace">
               <h2>Ayuna.id</h2>
-              <p>Demi Kenyaman Anda Saat Belanja, Mohon Tidak Memberi ID Anda ke Siapapun. Happy Shopping</p>
+              <p>
+                Demi Kenyaman Anda Saat Belanja, Mohon Tidak Memberi ID Anda ke
+                Siapapun. Happy Shopping
+              </p>
             </div>
             <div className="rightspace">
               <div className="loginInputContainer">
@@ -203,9 +222,6 @@ const Header = (props) => {
                   onClick={userLogin}
                 />
                 <p style={{ textAlign: "center" }}>OR</p>
-
-               
-                
               </div>
             </div>
           </div>
