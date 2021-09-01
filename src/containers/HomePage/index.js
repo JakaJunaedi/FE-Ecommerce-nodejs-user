@@ -12,18 +12,20 @@ import './style.css';
  **/
 
 const HomePage = (props) => {
-  
+
+{/**  
 const breakPoints = [
   { width:1, itemToShow: 1 },
   { width:550, itemToShow: 2 },
   { width:768, itemToShow: 3 },
   { width:1200, itemToShow: 4 }
 ]
-  
+ */}  
 
   return (
     <Layout>
       <div className="headerHome">Selamat Datang Di Ayuna</div>
+      {/**
       <div className="carouselHome">
       <Carousel breakPoints={breakPoints}>
         <Item>Statu</Item>
@@ -32,6 +34,7 @@ const breakPoints = [
         <Item>dua</Item>   
       </Carousel>
       </div>
+       */}
     </Layout>
   );
 };
