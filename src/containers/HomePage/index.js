@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
 import MenuHeader from "../../components/MenuHeader";
-import Carousel from 'react-elastic-carousel';
-import Item from './item';
+//import Carousel from 'react-elastic-carousel';
+//import Item from './item';
 import './style.css';
 
 /**
