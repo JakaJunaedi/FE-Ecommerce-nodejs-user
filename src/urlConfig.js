@@ -1,5 +1,5 @@
-//export const baseUrl = "https://nodejs-ecommerc.herokuapp.com"; //Base Backend Heroku
-export const baseUrl = "http://localhost:2000"; //Base Backend local
+export const baseUrl = "https://nodejs-ecommerc.herokuapp.com"; //Base Backend Heroku
+//export const baseUrl = "http://localhost:2000"; //Base Backend local
 //export const urlResetPassword = "http://localhost:2000/api/admin/reset-password" // reset password local
 export const urlResetPassword = "https://nodejs-ecommerc.herokuapp.com/api/admin/reset-password"
 
