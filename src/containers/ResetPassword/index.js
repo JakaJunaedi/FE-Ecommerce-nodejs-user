@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import axios from "../../helpers/axios";
+import { baseUrl, urlResetPassword } from "../../urlConfig";
 
 const ResetPassword = (props) => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const ResetPassword = (props) => {
     if (!email) {
       setError("email harus diisi");
     } else {
-        axios.post('http://localhost:2000/api/admin/reset-password', {email: email})
+        axios.post(`${urlResetPassword}`, {email: email})
         .then(res => {
             //console.log(res)
             setEmail('')

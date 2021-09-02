@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import axios from "../../helpers/axios";
+import { baseUrl } from "../../urlConfig";
 
 const FormPassword = (props) => {
   const [password, setPassword] = useState("");
@@ -43,7 +44,7 @@ const FormPassword = (props) => {
     //console.log(props.match.params.token)
 
     axios
-      .post(`http://localhost:2000/api/admin/forgot-password`, data)
+      .post(`${baseUrl},/api/admin/forgot-password`, data)
       .then((res) => {
         //console.log(res)
         if (res) {
