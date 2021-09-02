@@ -44,7 +44,7 @@ const FormPassword = (props) => {
     //console.log(props.match.params.token)
 
     axios
-      .post(`${baseUrl},/api/admin/forgot-password`, data)
+      .post(`${baseUrl}/api/admin/forgot-password`, data)
       .then((res) => {
         //console.log(res)
         if (res) {
